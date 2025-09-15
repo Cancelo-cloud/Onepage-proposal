@@ -3,195 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Support Buddy - GL2E Programme</title>
+    <title>A2B Training Business Support</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #1e3a8a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
         }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
+
         .header {
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #4682B4;
+            color: white;
+            margin-bottom: 40px;
+            background: rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
         }
-        
+
         .header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #1e40af;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header .subtitle {
-            font-size: 1.2rem;
-            color: #374151;
-            font-weight: 500;
-        }
-        
-        .purpose {
-            background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            border-left: 5px solid #0288d1;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .purpose h2 {
-            color: #0d47a1;
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-        
-        .structure {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 25px;
-            background: rgba(240, 248, 255, 0.7);
-            padding: 15px;
-            border-radius: 10px;
-        }
-        
-        .structure-item {
-            text-align: center;
-            padding: 15px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .structure-item h3 {
-            color: #1565c0;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-        
-        .section {
-            margin-bottom: 25px;
-            padding: 20px;
-            background: rgba(248, 250, 252, 0.8);
-            border-radius: 12px;
-            border-left: 4px solid #2196f3;
-        }
-        
-        .section h2 {
-            color: #0d47a1;
-            font-size: 1.3rem;
+            font-size: 3.2em;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
-        .section h2::before {
-            content: '▶';
-            color: #2196f3;
-            margin-right: 10px;
-            font-size: 0.9rem;
-        }
-        
-        .section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .section li {
+
+        .header .subtitle {
+            font-size: 1.4em;
+            opacity: 0.95;
             margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
         }
-        
-        .section li::before {
-            content: '•';
-            color: #2196f3;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .highlight {
-            background: linear-gradient(120deg, #fff59d, #ffee58);
-            padding: 3px 8px;
-            border-radius: 5px;
-            font-weight: 600;
-        }
-        
-        .monthly-progression {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .month-card {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid #2196f3;
-            text-align: center;
-        }
-        
-        .month-card h4 {
-            color: #1565c0;
-            margin-bottom: 8px;
-            font-size: 1rem;
-        }
-        
-        .month-card p {
-            font-size: 0.9rem;
-            color: #555;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #e3f2fd;
-            color: #555;
+
+        .header .tagline {
+            font-size: 1.1em;
+            opacity: 0.8;
             font-style: italic;
         }
-        
+
+        .support-systems {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .support-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .support-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .support-card.toastmasters {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .support-card.cognitive {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .support-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .support-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .support-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .support-details {
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .detail-item {
+            margin-bottom: 15px;
+        }
+
+        .detail-item strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .detail-item ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .detail-item li {
+            margin-bottom: 5px;
+        }
+
+        .business-support {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .purpose-box {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .purpose-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .logistics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logistics-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+        }
+
+        .service-card.ideas { border-left-color: #e74c3c; }
+        .service-card.proposals { border-left-color: #3498db; }
+        .service-card.time-mgmt { border-left-color: #2ecc71; }
+        .service-card.financial { border-left-color: #f39c12; }
+        .service-card.health { border-left-color: #9b59b6; }
+        .service-card.decisions { border-left-color: #1abc9c; }
+
+        .service-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .role-badge {
+            background: #34495e;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .wake-up-call {
+            background: rgba(231, 76, 60, 0.1);
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-style: italic;
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        .example-box {
+            background: rgba(52, 73, 94, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 3px solid #34495e;
+        }
+
+        .price-highlight {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
         @media (max-width: 768px) {
-            .container {
-                padding: 25px;
-                margin: 10px;
-            }
-            
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.2em;
             }
             
-            .structure {
+            .support-grid,
+            .services-grid {
                 grid-template-columns: 1fr;
             }
             
-            .monthly-progression {
-                grid-template-columns: 1fr;
+            .container {
+                padding: 15px;
             }
         }
     </style>
@@ -199,126 +280,163 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Business Support Buddy</h1>
-            <div class="subtitle">Core Weekly Role (6 Prep Days) - GL2E Programme</div>
+            <h1>🚀 A2B Training</h1>
+            <div class="subtitle">Business Support & Leadership Development</div>
+            <div class="tagline">"Basic, Transformative & Replicable"</div>
         </div>
-        
-        <div class="purpose">
-            <h2>🎯 Purpose</h2>
-            <p>Equip peers with practical business knowledge, share tools, and create material that feeds into monthly learning sessions.</p>
-        </div>
-        
-        <div class="structure">
-            <div class="structure-item">
-                <h3>📝 Content Creation</h3>
-                <p><strong>4 days</strong></p>
-            </div>
-            <div class="structure-item">
-                <h3>🚀 Delivery</h3>
-                <p><strong>2 days</strong></p>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>1. Curate & Create Resources (Weekly)</h2>
-            <ul>
-                <li><span class="highlight">2 short pieces per week</span> (articles, examples, or summaries)</li>
-                <li><em>Monday Insight</em>: e.g., a decision-making tool or mindset model</li>
-                <li><em>Friday Reflection</em>: e.g., "Why businesses fail" with 3 takeaways</li>
-                <li>Keep it <strong>practical + short (1 pager, audio note)</strong></li>
-                <li>Business Supervisor shares: File of Mental Models, Cognitive Biases, and frameworks</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>2. Peer-Led Business Forum (Weekly)</h2>
-            <ul>
-                <li>Run a <span class="highlight">"Hot Seat" virtual/WhatsApp boardroom</span>: one peer shares a real challenge; others act as board members</li>
-                <li><strong>Categories:</strong> <em>Starting Out</em>, <em>Current Fire</em>, <em>Growth Choice</em></li>
-                <li>Document outcomes → share lessons back with the wider group</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>3. Build a "Failure Library" (Ongoing)</h2>
-            <ul>
-                <li>Collect public mistakes + lessons from peers, sector by sector</li>
-                <li><strong>Format:</strong> "Do's & Don'ts" (e.g., Farming, Clothing Sales)</li>
-                <li>Example: Unsuccessful Farms do these mistakes, etc.</li>
-                <li>Submit monthly updates → best examples get shared programme-wide</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>4. Monthly Deep-Dive Projects</h2>
-            <p>Each month, create comprehensive resources on:</p>
-            <div class="monthly-progression">
-                <div class="month-card">
-                    <h4>Month 1</h4>
-                    <p>Overcoming Starting Barriers (fear of failure, analysis paralysis, "I'm not ready" mindset)</p>
-                </div>
-                <div class="month-card">
-                    <h4>Month 2</h4>
-                    <p>From Idea to First Sale (validation, pricing, finding your first customers)</p>
-                </div>
-                <div class="month-card">
-                    <h4>Month 3</h4>
-                    <p>Building Momentum (systems, consistency, handling competition)</p>
-                </div>
-                <div class="month-card">
-                    <h4>Month 4</h4>
-                    <p>Growth & Partnerships (scaling, team building, strategic alliances)</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>5. Celebrate Stories (Monthly)</h2>
-            <ul>
-                <li>Gather 1–2 success/failure stories from peers</li>
-                <li>One-on-one virtual mentoring with field workers developing side hustles</li>
-                <li>Package as a "Story of the Month" → to inspire, warn, or teach</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>📊 Evaluation System</h2>
-            <p><strong>How Business Supervisor Evaluates Business Buddies:</strong></p>
+
+        <div class="support-systems">
+            <div class="section-title">💪 Team Leader Support Systems</div>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-left: 4px solid #4caf50;">
-                    <h3 style="color: #2e7d32; margin-bottom: 15px; font-size: 1.1rem;">📅 Weekly Report (5-min review)</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 8px; display: flex; align-items: center;"><span style="color: #4caf50; margin-right: 8px;">✅</span> 2 Resources created and shared (Monday Insight + Friday Reflection)</li>
-                        <li style="margin-bottom: 8px; display: flex; align-items: center;"><span style="color: #4caf50; margin-right: 8px;">✅</span> Hot Seat session completed and documented</li>
-                        <li style="margin-bottom: 8px; display: flex; align-items: center;"><span style="color: #4caf50; margin-right: 8px;">✅</span> Failure Library contribution submitted</li>
-                    </ul>
+            <div class="support-grid">
+                <div class="support-card toastmasters">
+                    <div class="support-icon">🎤</div>
+                    <h3>Toastmasters Program</h3>
+                    <p class="support-subtitle">Real-World Communication Training</p>
+                    <div class="support-details">
+                        <div class="detail-item">
+                            <strong>🏆 President:</strong> You (Leading by Example)
+                        </div>
+                        <div class="detail-item">
+                            <strong>📊 Training Focus:</strong>
+                            <ul>
+                                <li>Record "uhms" and filler words for improvement</li>
+                                <li>Grammar and pronunciation coaching</li>
+                                <li>Propose engaging topics and speeches</li>
+                                <li>Build unshakeable public speaking confidence</li>
+                                <li>Real-world replication of Toastmasters model</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <strong>🎯 Transformative Impact:</strong> Turn team leaders into confident, articulate communicators who inspire action
+                        </div>
+                    </div>
                 </div>
-                
-                <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-left: 4px solid #ff9800;">
-                    <h3 style="color: #f57c00; margin-bottom: 15px; font-size: 1.1rem;">📋 Monthly Report (15-min review)</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 8px; display: flex; align-items: center;"><span style="color: #ff9800; margin-right: 8px;">✅</span> Monthly deep-dive project completed</li>
-                        <li style="margin-bottom: 8px; display: flex; align-items: center;"><span style="color: #ff9800; margin-right: 8px;">✅</span> Success/Failure story collected and packaged</li>
-                        <li style="margin-bottom: 8px; display: flex; align-items: center;"><span style="color: #ff9800; margin-right: 8px;">✅</span> One-on-one mentorship sessions conducted</li>
-                        <li style="margin-bottom: 8px; display: flex; align-items: center;"><span style="color: #ff9800; margin-right: 8px;">✅</span> Monthly content portfolio submitted</li>
-                    </ul>
+
+                <div class="support-card cognitive">
+                    <div class="support-icon">🧠</div>
+                    <h3>Cognitive Biases & Mental Models Coach</h3>
+                    <p class="support-subtitle">Online Classes for Superior Decision Making</p>
+                    <div class="support-details">
+                        <div class="detail-item">
+                            <strong>📚 Format:</strong> One-by-one breakdown of cognitive biases
+                        </div>
+                        <div class="detail-item">
+                            <strong>💼 Business-Focused Biases:</strong>
+                            <ul>
+                                <li>Confirmation Bias - Seeking only supporting evidence</li>
+                                <li>Sunk Cost Fallacy - Throwing good money after bad</li>
+                                <li>Anchoring Bias - Over-relying on first information</li>
+                                <li>Availability Heuristic - Judging by recent examples</li>
+                                <li>Dunning-Kruger Effect - Overconfidence with little knowledge</li>
+                            </ul>
+                        </div>
+                        <div class="detail-item">
+                            <strong>🎯 Goal:</strong> Develop clear, rational thinking for better business and work decisions
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div style="background: linear-gradient(135deg, #e8f5e8, #f1f8e9); padding: 20px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #2196f3;">
-                <h3 style="color: #1565c0; margin-bottom: 15px; font-size: 1.1rem;">⚡ Time-saving for Business Supervisor</h3>
-                <ul>
-                    <li>Simple checkbox format</li>
-                    <li>Focus on completion, not quality assessment initially</li>
-                    <li>Portfolio review only for monthly deep-dives</li>
-                    <li>Use AI to filter Signal from Noise</li>
-                </ul>
             </div>
         </div>
-        
-        <div class="footer">
-            <p>🌱 Green Learn to Earn (GL2E) Programme • Building South Africa's Green Economy Leaders</p>
+
+        <div class="business-support">
+            <div class="section-title">💼 A2B Training – Business Support Proposal</div>
+            
+            <div class="purpose-box">
+                <h3>🔥 PURPOSE</h3>
+                <p>To inspire colleagues and field staff with the urgency and drive of A2B Training, providing Business Support that turns ideas into clear actions, measurable outcomes, and meaningful progress.</p>
+            </div>
+
+            <div class="logistics">
+                <div class="logistics-item">
+                    <h4>⏰ Availability</h4>
+                    <p>Weekends & Evenings</p>
+                </div>
+                <div class="logistics-item">
+                    <h4>📹 Format</h4>
+                    <p>1-hour recorded coaching sessions<br>+ 1-hour recorded reviews/feedback</p>
+                </div>
+                <div class="logistics-item">
+                    <h4>💰 Rate</h4>
+                    <p>R150 / R200</p>
+                </div>
+            </div>
+
+            <div class="section-title" style="font-size: 1.8em; margin-top: 40px;">🛠️ Service Offerings</div>
+            
+            <div class="services-grid">
+                <div class="service-card ideas">
+                    <div class="service-title">💡 Business Ideas Development</div>
+                    <div class="role-badge">Accountability Partner</div>
+                    <p>Review of business concepts, target market, and revenue models with constructive feedback.</p>
+                    <div class="wake-up-call">
+                        🔍 The Reality Check: "Is this actually viable, or are we just dreaming? Let's stress-test your assumptions."
+                    </div>
+                </div>
+
+                <div class="service-card proposals">
+                    <div class="service-title">📋 Project Proposal Review (Funding Applications)</div>
+                    <div class="role-badge">Clarity Checker</div>
+                    <p>Clarity checks on draft proposals, ensuring alignment, focus, and professional presentation.</p>
+                    <div class="wake-up-call">
+                        ✨ The Polish: "Your idea works—but does it speak their language or yours?"
+                    </div>
+                </div>
+
+                <div class="service-card time-mgmt">
+                    <div class="service-title">⏱️ Time & Task Management</div>
+                    <div class="role-badge">Accountability Partner</div>
+                    <p>Weekly prioritization tools and templates to improve productivity and accountability.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong> Using the Eisenhower Matrix (Urgent vs Important model) to separate high-priority tasks from low-value distractions.
+                    </div>
+                    <div class="wake-up-call">
+                        ⚡ The Wake-Up Call: "Where did your week actually go? Let's track it and fix the leaks."
+                    </div>
+                </div>
+
+                <div class="service-card financial">
+                    <div class="service-title">💰 Financial Guidance (Basic Investment Allocation)</div>
+                    <div class="role-badge">Money Coach</div>
+                    <p>Introduction to safe, practical investment options (interest, dividends, exposure).</p>
+                    <div class="example-box">
+                        <strong>Example:</strong> Comparing dividend yields (e.g., MTN vs. Cell C) or bank interest rates (Capitec vs. Nedbank) to make informed choices.
+                    </div>
+                    <div class="wake-up-call">
+                        💵 The Money Talk: "Stop letting your money sit there doing nothing—make it work as hard as you do."
+                    </div>
+                </div>
+
+                <div class="service-card health">
+                    <div class="service-title">💪 Health & Performance Support</div>
+                    <div class="role-badge">Accountability Partner</div>
+                    <p>Guidance on exercise routines and meal planning for weight loss, weight gain, or energy optimization.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong> A Diet & Training Tracker — reviewing weekly intake of protein, fats, and carbs, plus exercise breakdown (strength training, cardio, anaerobic sessions).
+                    </div>
+                    <div class="wake-up-call">
+                        🔋 The Energy Boost: "Health is wealth."
+                    </div>
+                </div>
+
+                <div class="service-card decisions">
+                    <div class="service-title">🎯 Decision-Making Frameworks</div>
+                    <div class="role-badge">Clarity Checker</div>
+                    <p>Templates and coaching for approaching major personal or professional decisions.</p>
+                    <div class="wake-up-call">
+                        🚀 The Breakthrough: "Stop overthinking and start deciding. Here's how to cut through the noise."
+                    </div>
+                </div>
+            </div>
+
+            <div class="price-highlight">
+                🎯 TRANSFORMATIVE IMPACT: Turn ideas into actions, dreams into measurable progress!
+            </div>
+        </div>
+
+        <div class="header" style="margin-top: 40px;">
+            <h2>🌟 Basic • Transformative • Replicable</h2>
+            <p>Support systems that scale and inspire action across any organization</p>
         </div>
     </div>
 </body>
