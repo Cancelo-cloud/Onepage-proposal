@@ -98,18 +98,16 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     }
     
+    /* Logo now uses an image placed in the repo's images/ folder */
     .logo {
       width: 72px;
       height: 72px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      color: white;
-      font-size: 28px;
+      display: block;
+      object-fit: cover;
       box-shadow: 0 6px 20px rgba(45, 106, 79, 0.3);
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+      flex-shrink: 0;
     }
     
     h1 {
@@ -351,7 +349,8 @@
   
   <main class="wrap">
     <header>
-      <div class="logo">GB</div>
+      <!-- Using the uploaded image from the repo as the logo -->
+      <img src="images/Green%20Logo%20.jpg" alt="GreenBeacons logo" class="logo">
       <div>
         <h1>GreenBeacons</h1>
         <div class="tagline">Train supervisors. Build digital confidence. Boost effective communication.</div>
@@ -362,7 +361,7 @@
       <div class="model-content">
         <h3>Model — Train the Trainer</h3>
         <div class="model-text">
-          We train team leaders on digital skills, clear communication, and personal finance basics to ensure their reports (Gmail or monthly submissions) are professional, their facilitation is inspiring and efficient, and their financial habits set the example.
+          We train team leaders on digital skills, clear communication, and personal finance basics to ensure their reports (Gmail or monthly submissions) are professional, their facilitation is [...]
         </div>
 
         <div class="pill">Target clients: NGOs • Municipalities • Community projects</div>
@@ -382,7 +381,7 @@
         <div class="sidebar-section">
           <strong>Our solution</strong>
           <div class="sidebar-text">
-            We train your team leaders to teach digital basics, deliver sharp communication, and support practical personal finance — turning training into daily, repeatable habits with measurable evidence and recordable outcomes.
+            We train your team leaders to teach digital basics, deliver sharp communication, and support practical personal finance — turning training into daily, repeatable habits with measura[...]
           </div>
         </div>
       </aside>
@@ -418,7 +417,7 @@
       <div class="model-content">
         <h3>End goal</h3>
         <div class="model-text">
-          Reduce skills gap in digital tools, deliver engaging & efficient communication, and increase independence in the information age — so your program shows stronger reporting quality, better team coordination, and participants who can sustain income beyond the program cycle.
+          Reduce skills gap in digital tools, deliver engaging & efficient communication, and increase independence in the information age — so your program shows stronger reporting quality, be[...]
         </div>
 
         <div style="margin-top:20px">
@@ -440,7 +439,7 @@
         <div class="sidebar-section">
           <strong>How we start</strong>
           <div class="sidebar-text">
-            Quick survey to scope needs via short baseline assessment — e.g., Gmail use for professional communication: 1 (needs lots of help) to 5 (confident and consistent). Then we design a 4-week pilot with your Team Leaders, with recorded sessions, attendance logs, and 3 participant stories showing tangible change.
+            Quick survey to scope needs via short baseline assessment — e.g., Gmail use for professional communication: 1 (needs lots of help) to 5 (confident and consistent). Then we design a [...]
           </div>
         </div>
       </aside>
