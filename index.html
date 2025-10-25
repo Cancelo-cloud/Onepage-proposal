@@ -99,28 +99,26 @@
     }
     
     /* Logo container — white padded box so logo image is not cropped */
-    .logo-wrap {
-      width: 72px;
-      height: 72px;
-      border-radius: 14px;
-      background: #ffffff; /* ensure logo sits on white */
-      padding: 8px; /* space around the image */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 20px rgba(45, 106, 79, 0.25);
-      flex-shrink: 0;
+        .logo-wrap{
+      width:72px;
+      height:72px;
+      border-radius:14px;
+      background:#ffffff;      /* white box so logo looks correct */
+      padding:8px;             /* space around the logo */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 6px 20px rgba(45,106,79,0.25);
+      flex-shrink:0;
     }
-
-    .logo-wrap img {
-      max-width: 100%;
-      max-height: 100%;
-      display: block;
-      object-fit: contain; /* scale without cropping */
-      border-radius: 8px;
-      background: transparent;
+    .logo-wrap img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:contain;      /* scale without cropping */
+      display:block;
+      border-radius:6px;
     }
-    
+        
     h1 {
       font-size: 36px;
       margin: 0;
