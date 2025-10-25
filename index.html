@@ -98,16 +98,27 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     }
     
-    /* Logo now uses an image placed in the repo's images/ folder */
-    .logo {
+    /* Logo container — white padded box so logo image is not cropped */
+    .logo-wrap {
       width: 72px;
       height: 72px;
       border-radius: 14px;
-      display: block;
-      object-fit: cover;
-      box-shadow: 0 6px 20px rgba(45, 106, 79, 0.3);
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+      background: #ffffff; /* ensure logo sits on white */
+      padding: 8px; /* space around the image */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(45, 106, 79, 0.25);
       flex-shrink: 0;
+    }
+
+    .logo-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      object-fit: contain; /* scale without cropping */
+      border-radius: 8px;
+      background: transparent;
     }
     
     h1 {
@@ -349,8 +360,10 @@
   
   <main class="wrap">
     <header>
-      <!-- Using the uploaded image from the repo as the logo -->
-      <img src="images/Green%20Logo%20.jpg" alt="GreenBeacons logo" class="logo">
+      <!-- Using the uploaded image from the repo as the logo (recommended filename: images/green-logo.jpg) -->
+      <div class="logo-wrap">
+        <img src="images/green-logo.jpg" alt="GreenBeacons logo">
+      </div>
       <div>
         <h1>GreenBeacons</h1>
         <div class="tagline">Train supervisors. Build digital confidence. Boost effective communication.</div>
