@@ -1,1 +1,0 @@
-This folder contains placeholder images for the Onepage-proposal site. Add your photos (for example: thabo-photo.jpg and samkelo-photo.jpg) here and update index.html to reference images/thabo-photo.jpg and images/samkelo-photo.jpg.
