@@ -98,13 +98,12 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     }
     
-    /* Logo container — white padded box so logo image is not cropped */
-        .logo-wrap{
+    .logo-wrap{
       width:130px;
       height:130px;
       border-radius:14px;
-      background:#ffffff;      /* white box so logo looks correct */
-      padding:8px;             /* space around the logo */
+      background:#ffffff;
+      padding:8px;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -114,7 +113,7 @@
     .logo-wrap img{
       max-width:100%;
       max-height:100%;
-      object-fit:contain;      /* scale without cropping */
+      object-fit:contain;
       display:block;
       border-radius:6px;
     }
@@ -199,7 +198,7 @@
     
     .model {
       display: grid;
-      grid-template-columns: 1fr 340px;
+      grid-template-columns: 340px 1fr;
       gap: 28px;
       margin: 40px 0;
     }
@@ -358,8 +357,16 @@
   
   <main class="wrap">
     <header>
-      <!-- Using the uploaded image from the repo as the logo (recommended filename: images/green-logo.jpg) -->
-      <section class="model">
+      <div class="logo-wrap">
+        <img src="images/images-greenlogo.jpg" alt="GreenBeacons logo">
+      </div>
+      <div>
+        <h1>GreenBeacons</h1>
+        <div class="tagline">Coach supervisors. Build digital confidence. Boost effective communication.</div>
+      </div>
+    </header>
+
+    <section class="model">
       <aside class="sidebar-card">
         <div class="sidebar-section">
           <strong>THE PROBLEM</strong>
@@ -367,7 +374,7 @@
             Too much training, too little application. Organisations run workshops; participants leave with knowledge but no practical follow-through.
           </div>
         </div>
-    
+
         <div class="sidebar-section">
           <strong>OUR SOLUTION</strong>
           <div class="sidebar-text">
@@ -375,13 +382,13 @@
           </div>
         </div>
       </aside>
-    
+
       <div class="model-content">
         <h3>Model — Train the Trainer</h3>
         <div class="model-text">
           We train team leaders on digital skills, clear communication, and personal finance basics to ensure their reports (Gmail or monthly submissions) are professional, their facilitation is inspiring and efficient, and their financial habits set the example.
         </div>
-    
+
         <div class="pill">Target clients: NGOs • Municipalities • Community projects</div>
         <div style="margin-top:12px;color:var(--text-muted);font-size:14px">
           Target participants: under-resourced individuals and emerging leaders
@@ -395,7 +402,16 @@
         </div>
       </div>
     </section>
-      
+
+    <div class="grid">
+      <article class="card">
+        <h3>1. Digital Skills</h3>
+        <div class="card-desc">Microsoft basics • Keyboard rules • Gmail & professional email • Using AI for work</div>
+        <div class="card-outcome">
+          <strong>Outcome:</strong> team leaders who can produce clean reports, manage attendance, and coach others to use simple digital tools.
+        </div>
+      </article>
+
       <article class="card">
         <h3>2. Public Speaking & Communication</h3>
         <div class="card-desc">Two-minute presentations • Clear instructions • Selling yourself and your work</div>
@@ -414,6 +430,15 @@
     </div>
 
     <section class="model">
+      <aside class="sidebar-card">
+        <div class="sidebar-section">
+          <strong>How we start</strong>
+          <div class="sidebar-text">
+            Quick survey to scope needs via short baseline assessment — e.g., Gmail use for professional communication: 1 (needs lots of help) to 5 (confident and consistent). Then we design a 4-week pilot with your Team Leaders, with recorded sessions, attendance logs, and 3 participant stories showing tangible change.
+          </div>
+        </div>
+      </aside>
+
       <div class="model-content">
         <h3>End goal</h3>
         <div class="model-text">
@@ -423,7 +448,7 @@
         <div style="margin-top:20px">
           <strong style="color:var(--primary-dark);font-size:17px;display:block;margin-bottom:8px">Delivery 90% online</strong>
           <div style="color:var(--text-muted);font-size:14px">
-            • Weekdays 16:00–17:00 
+            • Weekdays 16:00–17:00<br>
             • Saturday mornings 09:00-10:00
           </div>
         </div>
@@ -435,15 +460,6 @@
           </div>
         </div>
       </div>
-
-      <aside class="sidebar-card">
-        <div class="sidebar-section">
-          <strong>How we start</strong>
-          <div class="sidebar-text">
-            Quick survey to scope needs via short baseline assessment — e.g., Gmail use for professional communication: 1 (needs lots of help) to 5 (confident and consistent). Then we design a 4-week pilot with your Team Leaders, with recorded sessions, attendance logs, and 3 participant stories showing tangible change.
-          </div>
-        </div>
-      </aside>
     </section>
 
     <div class="cta-section">
