@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Beacons | Strategic Positioning in the AI Era</title>
+    <title>Green Beacons | Strategic Flow</title>
     <style>
         * {
             margin: 0;
@@ -13,369 +13,284 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a2e0a 0%, #1a4d2e 50%, #2d5a3d 100%);
+            background: #1a1a1a;
             color: #fff;
-            line-height: 1.6;
-            min-height: 100vh;
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 100vh;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        header {
-            text-align: center;
-            padding: 60px 0 40px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            margin-bottom: 40px;
-            border: 1px solid rgba(74, 222, 128, 0.2);
-        }
-        
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #4ade80, #86efac);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .tagline {
-            font-size: 1.3em;
-            color: #86efac;
-            font-weight: 300;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        
-        .positioning {
-            background: rgba(34, 197, 94, 0.15);
-            padding: 30px;
-            border-radius: 15px;
-            margin: 40px 0;
-            border-left: 5px solid #4ade80;
-            backdrop-filter: blur(10px);
-        }
-        
-        .positioning h2 {
-            color: #4ade80;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-        
-        .positioning p {
-            font-size: 1.2em;
-            font-style: italic;
-            color: #d1fae5;
-        }
-        
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        
-        .industry-card {
-            background: rgba(21, 128, 61, 0.2);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid rgba(74, 222, 128, 0.3);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .industry-card:hover {
-            transform: translateY(-5px);
-            background: rgba(21, 128, 61, 0.35);
-            border-color: #4ade80;
-            box-shadow: 0 10px 30px rgba(74, 222, 128, 0.3);
-        }
-        
-        .industry-card h3 {
-            color: #4ade80;
-            margin-bottom: 15px;
-            font-size: 1.4em;
-            border-bottom: 2px solid #86efac;
-            padding-bottom: 10px;
-        }
-        
-        .fit-badge {
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .fit-strong {
-            background: #4ade80;
-            color: #0a2e0a;
-        }
-        
-        .fit-ownership {
-            background: #86efac;
-            color: #0a2e0a;
-        }
-        
-        .fit-expertise {
-            background: #34d399;
-            color: #0a2e0a;
-        }
-        
-        .fit-investment {
-            background: #a7f3d0;
-            color: #0a2e0a;
-        }
-        
-        .industry-card ul {
-            list-style: none;
-            color: #d1fae5;
-        }
-        
-        .industry-card ul li {
-            padding: 8px 0;
-            padding-left: 25px;
+        .scroll-container {
+            display: flex;
+            height: 100vh;
+            width: 400vw;
             position: relative;
         }
         
-        .industry-card ul li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #4ade80;
-            font-weight: bold;
-        }
-
-        .industry-description {
-            color: #a7f3d0;
-            font-size: 0.95em;
-            margin-bottom: 15px;
-            font-style: italic;
-            line-height: 1.5;
+        .section {
+            min-width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 60px;
         }
         
-        .summary-table {
-            background: rgba(21, 128, 61, 0.2);
-            padding: 40px;
-            border-radius: 15px;
-            margin: 40px 0;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(74, 222, 128, 0.3);
+        /* Consulting - Green Theme - Highest */
+        .consulting {
+            background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #10b981 100%);
+            align-items: flex-start;
+            padding-top: 10vh;
         }
         
-        .summary-table h2 {
-            color: #4ade80;
-            margin-bottom: 25px;
-            text-align: center;
-            font-size: 2em;
+        /* Technical Skills - Orange Theme */
+        .technical {
+            background: linear-gradient(135deg, #7c2d12 0%, #ea580c 50%, #fb923c 100%);
+            align-items: center;
+            padding-top: 20vh;
         }
         
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        /* Boring Business - Blue Theme - Lower */
+        .boring {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%);
+            align-items: flex-end;
+            padding-bottom: 25vh;
+        }
+        
+        /* Investments - Purple/Blue Theme - Lowest (Foundation) */
+        .investments {
+            background: linear-gradient(135deg, #312e81 0%, #4f46e5 50%, #818cf8 100%);
+            align-items: flex-end;
+            padding-bottom: 10vh;
+        }
+        
+        .content-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 60px;
+            max-width: 700px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section-number {
+            font-size: 1.2em;
+            font-weight: 600;
+            opacity: 0.7;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .details {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .details ul {
+            list-style: none;
             margin-top: 20px;
         }
         
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid rgba(74, 222, 128, 0.2);
+        .details li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
         }
         
-        th {
-            background: rgba(34, 197, 94, 0.3);
-            color: #4ade80;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9em;
-            letter-spacing: 1px;
-        }
-        
-        td {
-            color: #d1fae5;
-        }
-        
-        tr:hover {
-            background: rgba(34, 197, 94, 0.2);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #86efac;
-            font-size: 0.9em;
-        }
-        
-        .cta {
-            text-align: center;
-            margin: 50px 0;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 18px 40px;
-            background: linear-gradient(135deg, #4ade80, #22c55e);
-            color: #0a2e0a;
-            text-decoration: none;
-            border-radius: 30px;
+        .details li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
             font-weight: bold;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(74, 222, 128, 0.4);
+            font-size: 1.3em;
         }
         
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(74, 222, 128, 0.6);
-            background: linear-gradient(135deg, #22c55e, #16a34a);
+        .arrow {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 4em;
+            opacity: 0.4;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; transform: translateY(-50%) translateX(0); }
+            50% { opacity: 0.8; transform: translateY(-50%) translateX(10px); }
+        }
+        
+        .flow-note {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            font-size: 1em;
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Scroll hint */
+        .scroll-hint {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            animation: fadeOut 4s ease-in-out forwards;
+        }
+        
+        @keyframes fadeOut {
+            0%, 70% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .emphasis {
+            font-weight: 700;
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.95);
         }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            
-            .tagline {
-                font-size: 1.1em;
-            }
-            
-            .summary-table {
-                padding: 20px;
-                overflow-x: auto;
-            }
-            
-            table {
-                font-size: 0.9em;
-            }
+        /* Enable horizontal scroll with shift + wheel */
+        body {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Green Beacons</h1>
-            <p class="tagline">Building Response-Able Leaders in the AI Era</p>
-        </header>
-
-        <div class="positioning">
-            <h2>🎯 Unique Positioning</h2>
-            <p>"We train individuals and organizations to build response-able leaders through proven methodologies - combining coaching, training, and competence-based talent development."</p>
-        </div>
-
-        <h2 style="text-align: center; font-size: 2.2em; margin: 50px 0 30px; color: #4ade80;">Strategic Positioning in 5 AI-Era Industries</h2>
-
-        <div class="industries-grid">
-            <div class="industry-card">
-                <h3>💼 Consulting</h3>
-                <span class="fit-badge fit-strong">CORE BUSINESS</span>
-                <ul>
-                    <li><strong>A2B Certified Coaches:</strong> Book a hardwires interpretation, OI training and recruitment assessment</li>
-                    <li><strong>Green Beacons:</strong> Check out website for services we provide to individuals and organizations</li>
-                    <li><strong>Event Management:</strong> We manage operations & logistics for your event. Creating memorable experiences.</li>
-                </ul>
-            </div>
-
-            <div class="industry-card">
-                <h3>🔧 Boring Businesses</h3>
-                <span class="fit-badge fit-ownership">OWNERSHIP & OVERSIGHT</span>
-                <p class="industry-description">For Green Beacons Team - where we explore boring businesses to initiate, by deploying consulting capital gains.</p>
-                <ul>
-                    <li>Assess local or provincial boring services that are thriving and buy those companies</li>
-                    <li><strong>Examples:</strong> Plumbing, paper making, construction, electrical installations</li>
-                </ul>
-            </div>
-
-            <div class="industry-card">
-                <h3>⚙️ Technical Business</h3>
-                <span class="fit-badge fit-expertise">SELLING EXPERTISE</span>
-                <p class="industry-description">Skills each Green Beacon member has under their belt - not qualifications but practical skills we can train or offer to companies at an hourly/remote work basis.</p>
-                <ul>
-                    <li>Project Management - tested systems, compliance, best practices</li>
-                    <li>Project Administration - payroll</li>
-                    <li>Finance Manager - formulas, tested systems, etc.</li>
-                    <li>Monitoring and Evaluation - best practices, etc.</li>
-                </ul>
-            </div>
-
-            <div class="industry-card">
-                <h3>💻 Software Development</h3>
-                <span class="fit-badge fit-investment">INVEST & UNDERSTAND</span>
-                <p class="industry-description">Critical for Green Beacons to invest in and understand. Software shapes the tools and systems we use daily, amplifies our consulting reach through digital platforms, and enables us to scale our impact. By investing in companies creating and maintaining software, we stay ahead of technological shifts while generating returns that fuel our other ventures.</p>
-                <ul>
-                    <li>Invest in companies creating and maintaining software</li>
-                    <li>Impacts our tools and systems</li>
-                    <li>Enables digital scale and automation</li>
-                </ul>
-            </div>
-
-            <div class="industry-card">
-                <h3>🏥 Medicine & ETFs</h3>
-                <span class="fit-badge fit-investment">INVEST & UNDERSTAND</span>
-                <p class="industry-description">Easy Equities (JSE Stock Exchange)</p>
-                <ul>
-                    <li>Healthcare Stock Portfolio (Longevity hype)</li>
-                    <li>Longevity impacts ourselves and our clients</li>
-                    <li>Long-term wealth building strategy</li>
-                    <li>Diversified investment approach</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="summary-table">
-            <h2>📊 Services Across Industries Summary</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Industry</th>
-                        <th>Strategy</th>
-                        <th>What We Do</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Consulting</strong></td>
-                        <td><span class="fit-badge fit-strong">Strong</span></td>
-                        <td>Coaching, mentorship, talent, events</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Boring Business</strong></td>
-                        <td><span class="fit-badge fit-ownership">Ownership</span></td>
-                        <td>Ownership and oversee</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Technical Business</strong></td>
-                        <td><span class="fit-badge fit-expertise">Expertise</span></td>
-                        <td>Selling our expertise remotely / hourly</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Software</strong></td>
-                        <td><span class="fit-badge fit-investment">Invest</span></td>
-                        <td>Invest & understand - impacts our tools and systems</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Medicine & ETFs</strong></td>
-                        <td><span class="fit-badge fit-investment">Invest</span></td>
-                        <td>Invest & understand - Longevity impacts ourselves and clients</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="cta">
-            <a href="#contact" class="cta-button">Let's Build Response-Able Leaders Together</a>
-        </div>
-
-        <footer>
-            <p>Green Beacons | A2B Certified Coaches | 200+ Thought Leadership Articles</p>
-            <p style="margin-top: 10px; color: #4ade80;">Training individuals and organizations • Building Response-Able Leaders • Creating Memorable Experiences</p>
-        </footer>
+    <div class="scroll-hint">
+        ← Scroll horizontally (or use Shift + Mouse Wheel) →
     </div>
+    
+    <div class="scroll-container">
+        <!-- SECTION 1: Consulting -->
+        <div class="section consulting">
+            <div class="content-box">
+                <div class="section-number">Stage 1 • Start Here</div>
+                <h2>💼 Consulting</h2>
+                <div class="tagline">Green Beacons Core Business</div>
+                <div class="details">
+                    <p class="emphasis">Revenue Generator</p>
+                    <ul>
+                        <li>A2B Certified Coaching</li>
+                        <li>Training Programs for Individuals & Organizations</li>
+                        <li>Event Management & Facilitation</li>
+                        <li>Talent Spotting & Assessment</li>
+                    </ul>
+                    <div class="flow-note">
+                        💰 <strong>Profits flow into GB Account</strong> to fund future acquisitions
+                    </div>
+                </div>
+            </div>
+            <div class="arrow">→</div>
+        </div>
+
+        <!-- SECTION 2: Technical Skills -->
+        <div class="section technical">
+            <div class="content-box">
+                <div class="section-number">Stage 2 • Income Streams</div>
+                <h2>⚙️ Technical Skills</h2>
+                <div class="tagline">Day Jobs & Remote Work</div>
+                <div class="details">
+                    <p class="emphasis">Additional Income via Expertise</p>
+                    <ul>
+                        <li>Project Management (hourly/remote)</li>
+                        <li>Project Administration & Payroll</li>
+                        <li>Finance Management</li>
+                        <li>Monitoring & Evaluation</li>
+                    </ul>
+                    <div class="flow-note">
+                        💼 <strong>Day job profits + consulting revenue</strong> accumulate in GB Account
+                    </div>
+                </div>
+            </div>
+            <div class="arrow">→</div>
+        </div>
+
+        <!-- SECTION 3: Boring Business -->
+        <div class="section boring">
+            <div class="content-box">
+                <div class="section-number">Stage 3 • Acquisition</div>
+                <h2>🔧 Boring Business</h2>
+                <div class="tagline">Ownership & Oversight</div>
+                <div class="details">
+                    <p class="emphasis">Deploy Capital to Acquire</p>
+                    <ul>
+                        <li>Assess thriving local/provincial services</li>
+                        <li>Target: Plumbing, Construction, Electrical</li>
+                        <li>Paper Making, Waste Management, etc.</li>
+                        <li>Buy companies with consulting capital gains</li>
+                    </ul>
+                    <div class="flow-note">
+                        🏗️ <strong>Build wealth through boring, stable businesses</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow">→</div>
+        </div>
+
+        <!-- SECTION 4: Investments -->
+        <div class="section investments">
+            <div class="content-box">
+                <div class="section-number">Stage 4 • Foundation</div>
+                <h2>📈 Investments</h2>
+                <div class="tagline">Passive Wealth Building</div>
+                <div class="details">
+                    <p class="emphasis">10% Ongoing from Consulting + Day Jobs</p>
+                    <ul>
+                        <li><strong>Software/Tech:</strong> Companies creating tools we use</li>
+                        <li><strong>Medicine:</strong> Healthcare & longevity stocks</li>
+                        <li><strong>ETFs:</strong> Diversified portfolio via Easy Equities (JSE)</li>
+                    </ul>
+                    <div class="flow-note">
+                        🌱 <strong>While building businesses, wealth compounds passively</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enable horizontal scroll with Shift + Mouse Wheel
+        document.addEventListener('wheel', (e) => {
+            if (e.shiftKey) {
+                e.preventDefault();
+                window.scrollBy({
+                    left: e.deltaY,
+                    behavior: 'smooth'
+                });
+            }
+        });
+
+        // Enable arrow key navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                window.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+            } else if (e.key === 'ArrowLeft') {
+                window.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+            }
+        });
+    </script>
 </body>
 </html>
